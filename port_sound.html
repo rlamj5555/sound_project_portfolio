@@ -9,6 +9,134 @@
  
 
 </head>
+<style>
+    
+@import url(http://ts.daumcdn.net/custom/blog/0/606/skin/images/nanumgothic.css);
+
+#wrap{width: 100%; height: 100%; font-family: '함초롬바탕';}
+
+ul.tp_mnu>li{ margin-right: 15px; display: inline-block; color: black; font-size: 17px;line-height: 50px;}
+
+ul.tp_mnu>li>a{padding: 8px; padding-top: 4px; padding-bottom: 4px; color: black;font-weight: 600;18px; background-color: white; border-radius: 15px;}
+
+ul.tp_mnu>li>a:hover{color: white; background-color: crimson; }
+ul.tp_mnu{position: absolute; top: 0px; width: 100%; height: 50px; text-align: right;background-color: black; font-family: 'Nanum Gothic';}
+
+
+
+footer{ position:absolute;top: 700px;left: 270px; padding-top:10px;width: 80%; height: 30px; color: gray;  font-weight: 700; text-align: center; border: 1px solid transparent; border-top-color: gray;}
+
+div.backimg{position:absolute; top: 50px; width:240px; height:700px;; background-image: url(./Photo%20by%20Tobias%20Tullius%20on%20Unsplash.jpg);}
+
+div.left{position: absolute;top: 50px; width: 240px; height: 700px; background-color: black; opacity: 0.6;}
+
+
+h1.tit{margin-top: 70px; margin-left: 10px; margin-right: 10px; color: white;font-size:23px;font-weight: 100; font-family: '함초롬바탕'; line-height: 25px}
+
+h1.tit>span.font{color: crimson; font-size: 32px; font-weight: 700;}
+
+ul.left{margin:80px 15px 0px; }
+
+ul.left>a>li{ margin-bottom: 20px; padding-left: 20px; height: 50px; font-size: 18px; font-family: 'nanum';line-height: 50px; border: 1px solid white; opacity: 0.4}
+
+ul.left>a>li.sound{color: white; border: 1px solid white; opacity: 1;}
+
+ul.left>a>li:hover{color: white; border: 1px solid white; opacity: 1;}
+
+div.cent{position: absolute; top: 60px; left: 250px; overflow-y: scroll; width: 1260px; height: 630px;}
+
+div.cent>h1{margin-top: 30px; margin-left: 10px;color: crimson;font-size:45px;font-weight: 100; font-family: '함초롬바탕';}
+
+p.reason{ margin:30px 30px 0; font-size: 18px; line-height: 25px;}
+
+
+
+div.compose{margin:50px 20px; 0; font-family: '함초롬바탕'; }
+
+div.compose>h2{color: black; font-size: 38px; font-weight: 200;}
+
+
+div.piano{margin:50px 20px; 0; font-family: '함초롬바탕';}
+
+div.piano>h2{color: black; font-size: 38px; font-weight: 200;}
+
+/*div.sound>div.music_1{display: inline-block;}
+div.sound>div.music_2{display: inline-block;}
+div.sound>div.music_3{display: inline-block;}
+div.sound>div.music_4{display: inline-block;}
+div.sound>div.music_5{display: inline-block;}
+div.sound>div.music_6{display: inline-block;}
+div.sound>div.music_7{display: inline-block;}
+div.sound>div.music_8{display: inline-block;}
+div.sound>div.music_9{display: inline-block;}
+div.sound>div.music_10{display: inline-block;}
+div.sound>div.music_11{display: inline-block;}
+div.sound>div.music_12{display: inline-block;}
+div.sound>div.music_13{display: inline-block;}
+div.sound>div.music_14{display: inline-block;}*/
+
+div.sound>div.music_1>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_2>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_3>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_4>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_5>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_6>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_7>p{display: inline-block; margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_8>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_9>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_10>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_11>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_12>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_13>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.sound>div.music_14>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+span.title{color: crimson;font-size: 30px; }
+img{margin-top: 50px; margin-left: 10px; width: 200px; height:200px; }
+img.album_1{margin-top: 40px;}
+
+audio{margin-bottom:65px; margin-left: 70px; }
+
+
+
+div.piano>div.music_1>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+div.piano>div.music_2>p{display: inline-block;  margin-left: 20px; padding-right: 30px; width:500px; height: 200px; font-size: 15px;  line-height: 18px;border: 1px solid transparent; border-right-color:  grey;}
+
+
+img.mimic{position: absolute; width: 200px; height: auto; top: 430px; left: 900px;}
+/*audio file에 공백이 없어야해*/
+span.mimic{position: absolute; top: 625px; left: 950px; font-size: 11px; text-align: center;}
+
+audio.mimic{margin-bottom: 160px;}
+
+div.piano>p.reason{margin-bottom: 30px;}
+div.imp_1{display: inline-block;height: 170px; margin-top: 20px; border: 1px solid transparent; border-right-color:  grey;}
+div.imp_1>p{ margin-left: 30px;padding-top: 30px; padding-right: 30px; width:300px; height: 40px; font-size: 15px;  line-height: 18px;}
+div.imp_1>h2{margin-top: 10px; margin-left: 30px; color: crimson;font-size: 30px; font-weight: 100;}
+div.imp_1>audio{margin-top: 10px; margin-left: 20px;}
+div.imp_1:last-child{border:transparent;}
+
+div.imp_1>h2>span{display: block; margin-top: 15px; margin-left: 2px; font-size: 20px; color: black; }
+
+
+
+
+
+    
+</style>
 <body>
     <div id = "wrap">
    
@@ -53,7 +181,7 @@
              <div class = "sound">
                <span class="desc"></span>
                <div class="music_1">
-                    <img class = "album_1" src="../album_art/mood_dark.jpg"; alt="#"> 
+                    <img class = "album_1" src="./mood_dark.jpg"; alt="#"> 
                     <p>
                         <span class = "title">interrogation</span><br><br>
                         date : 2017.4.18 <br>
@@ -65,12 +193,12 @@
                 
                     
                     <audio class = "mimic "controls>
-                        <source src="../file/interrogation/interrogation.mp3" type = "audio/mp3">
+                        <source src="./interrogation.mp3" type = "audio/mp3">
                         
                         
                     </audio>
                     
-                    <a href="https://store.steampowered.com/app/913250/Mimic/"  target="_blank"><img src="../design_file/mimic.PNG" alt="" class="mimic"></a>
+                    <a href="https://store.steampowered.com/app/913250/Mimic/"  target="_blank"><img src="./mimic.PNG" alt="" class="mimic"></a>
                         <span class="mimic">[게임 'MIMIC' Steam 웹]</span>
                     
                     
@@ -82,7 +210,7 @@
                </div>          
                
                <div class="music_2">         
-                    <img class = "album_2" src="../album_art/whatdoyouimagine.jpg" alt="#"> 
+                    <img class = "album_2" src="./whatdoyouimagine.jpg" alt="#"> 
                     
                     <p>
                         <span class = "title">What do you Imagine?</span><br><br>
@@ -93,11 +221,11 @@
                     
                     </p>
                      <audio controls>
-                        <source src="../file/whatdoyouimagine/what_do_you_imagine.mp3">
+                        <source src="./what_do_you_imagine.mp3">
                     </audio>
                </div>
                
-               <div class="music_3"><img class = "album_3"                     src="../album_art/mood_red.jpg" alt="#">
+               <div class="music_3"><img class = "album_3"                     src="./mood_red.jpg" alt="#">
                <p>
                         <span class = "title">Finally</span><br><br>
                         date : 2017.6.1 <br>
@@ -107,14 +235,14 @@
                     
                     </p>
                      <audio controls>
-                        <source src="../file/Ginkgo/mood_jaju.mp3" type = "audio/mp3">
+                        <source src="./mood_jaju.mp3" type = "audio/mp3">
                     </audio>
                
                
                </div>        
                
                <div class="music_4">                  
-                    <img class = "album_4"                 src="../album_art/mood%20blue.jpg" alt="#">
+                    <img class = "album_4"                 src="./mood%20blue.jpg" alt="#">
                     
                     <p>
                         <span class = "title">Aquarium</span><br><br>
@@ -128,12 +256,12 @@
                     
                     </p>
                      <audio controls>
-                        <source src="../file/aquarium/bowl3.mp3" type = "audio/mp3">
+                        <source src="./bowl3.mp3" type = "audio/mp3">
                     </audio>
                </div>                  
                    
                 <div class="music_5">            
-                    <img class = "album_5" src="../album_art/mood%20pinkk.jpg" alt="#">
+                    <img class = "album_5" src="./mood%20pinkk.jpg" alt="#">
                     <p>
                         <span class = "title">minigame_1</span><br><br>
                         date : 2017.11.14 <br>
@@ -147,12 +275,12 @@
                     
                     </p>  
                      <audio controls>
-                        <source src="../file/myroom/no.2.mp3" type = "audio/mp3">
+                        <source src="./no.2.mp3" type = "audio/mp3">
                     </audio>                
                 </div> 
                 
                  <div class="music_6">         
-                    <img class = "album_6" src="../album_art/green.jpg" alt="#">
+                    <img class = "album_6" src="./green.jpg" alt="#">
                     <p>
                         <span class = "title">gentle breeze</span><br><br>
                         date : 2017.4.27 <br>
@@ -163,12 +291,12 @@
                         
                     </p>
                      <audio controls>
-                        <source src="../file/gentlebreeze/gentle_breeze.mp3" type = "audio/mp3">
+                        <source src="./gentle_breeze.mp3" type = "audio/mp3">
                     </audio>
                  </div> 
                 
                  <div class="music_7">         
-                    <img class = "album_7" src="../album_art/open.jpg" alt="#">   
+                    <img class = "album_7" src="./open.jpg" alt="#">   
                     <p>
                         <span class = "title">minigame_2</span><br><br>
                         date : 2017.11.1 <br>
@@ -179,12 +307,12 @@
                     
                     </p>    
                      <audio controls>
-                        <source src="../file/kidsarcade/no.1.mp3" type = "audio/mp3">
+                        <source src="./no.1.mp3" type = "audio/mp3">
                     </audio>          
                  </div> 
                  
                  <div class="music_8">         
-                    <img class = "album_8" src="../album_art/mood%20pinkk.jpg" alt="#">  
+                    <img class = "album_8" src="./mood%20pinkk.jpg" alt="#">  
                     <p>
                         <span class = "title">minigame_3</span><br><br>
                         date : 2017.6.28 <br>
@@ -194,12 +322,12 @@
                         &nbsp;어느 날 모바일로 마이룸이라는 게임을 하는데, 이 게임에 들어가면 좋을 것 같은 멜로디가 생각나서 작업하게 되었습니다. <br> <br><br>
                     </p>    
                      <audio controls>
-                        <source src="../file/myroom/cute.mp3" type = "audio/mp3">
+                        <source src="./cute.mp3" type = "audio/mp3">
                     </audio>           
                  </div> 
                  
                  <div class="music_9">         
-                    <img class = "album_9" src="../album_art/mood_dark.jpg" alt="#">  
+                    <img class = "album_9" src="./mood_dark.jpg" alt="#">  
                     <p>
                         <span class = "title">Vague Ending</span><br><br>
                         date : 2018.7.10 <br>
@@ -210,7 +338,7 @@
                     
                     </p>   
                      <audio controls>
-                        <source src="../file/vagueending/999.mp3" type = "audio/mp3">
+                        <source src="./999.mp3" type = "audio/mp3">
                     </audio>
                  </div>              
         <!--        
@@ -319,7 +447,7 @@
                        tool : Phone Recorder, GoldWave <br>
                    </p>
                    <audio class = "imp" controls>
-                        <source src="../file/piano/okay/improptu_1.mp3" type = "audio/mp3">
+                        <source src="./improptu_1.mp3" type = "audio/mp3">
                  </audio>
                </div>
                
@@ -330,7 +458,7 @@
                        tool : Phone Recorder, GoldWave <br>
                    </p>
                    <audio class = "imp" controls>
-                        <source src="../file/piano/okay/improptu_1.mp3" type = "audio/mp3">
+                        <source src="./improptu_1.mp3" type = "audio/mp3">
                  </audio>
                </div>
                
@@ -341,7 +469,7 @@
                        tool : Phone Recorder, GoldWave <br>
                    </p>
                    <audio class = "imp" controls>
-                        <source src="../file/piano/okay/improptu_2.mp3" type = "audio/mp3">
+                        <source src="./improptu_2.mp3" type = "audio/mp3">
                  </audio>
                </div>
                
@@ -352,7 +480,7 @@
                        tool : Phone Recorder, GoldWave <br>
                    </p>
                    <audio class = "imp" controls>
-                        <source src="../file/piano/okay/why_stop_now.mp3" type = "audio/mp3">
+                        <source src="./why_stop_now.mp3" type = "audio/mp3">
                  </audio>
                </div>
                
@@ -365,7 +493,7 @@
                        tool : Phone Recorder, GoldWave <br>
                    </p>
                    <audio class = "imp" controls>
-                        <source src="../file/piano/okay/samdo_real_piano.mp3" type = "audio/mp3">
+                        <source src="./samdo_real_piano.mp3" type = "audio/mp3">
                  </audio>
                </div>
                
@@ -376,7 +504,7 @@
                        tool : Phone Recorder, GoldWave <br>
                    </p>
                    <audio class = "imp" controls>
-                        <source src="../file/piano/okay/deemo.mp3" type = "audio/mp3">
+                        <source src="./deemo.mp3" type = "audio/mp3">
                  </audio>
                </div>
              
