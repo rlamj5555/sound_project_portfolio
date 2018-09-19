@@ -6,7 +6,120 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./port_programming.css">
- 
+    
+ <style>
+     @import url(http://ts.daumcdn.net/custom/blog/0/606/skin/images/nanumgothic.css);
+    #wrap{width: 100%;  font-family: '함초롬바탕';}
+
+
+    ul.tp_mnu>li{ margin-right: 15px; display: inline-block; color: black; font-size: 17px;line-height: 50px;}
+
+    ul.tp_mnu>li>a{padding: 8px; padding-top: 4px; padding-bottom: 4px; color: black;font-weight: 600;18px; background-color: white; border-radius: 15px;}
+
+    ul.tp_mnu>li>a:hover{color: white; background-color: crimson; }
+    ul.tp_mnu{position: absolute; top: 0px; width: 100%; height: 50px; text-align: right;background-color: black; font-family: 'Nanum Gothic';}
+
+
+    footer{ position:absolute;top: 700px;left: 270px; padding-top:10px;width: 80%; height: 30px; color: gray;  font-weight: 700; text-align: center;  background-color: white; border: 1px solid transparent; border-top-color: gray;}
+
+    div.backimg{position:absolute; top: 50px; width:240px; height:700px;; background-image: url(./Photo%20by%20Tobias%20Tullius%20on%20Unsplash.jpg);}
+
+    div.left{position: absolute;top: 50px; width: 240px; height: 700px; background-color: black; opacity: 0.6;}
+
+
+    h1.tit{margin-top: 70px; margin-left: 10px; margin-right: 10px; color: white;font-size:23px;font-weight: 100; font-family: '함초롬바탕'; line-height: 25px}
+
+    h1.tit>span.font{color: crimson; font-size: 32px; font-weight: 700;}
+
+    ul.left{margin:80px 15px 0px; }
+
+    ul.left>a>li{ margin-bottom: 20px; padding-left: 20px; height: 50px; font-size: 18px; font-family: 'nanum';line-height: 50px; border: 1px solid white; opacity: 0.4}
+
+    ul.left>a>li.programming{color: white; border: 1px solid white; opacity: 1;}
+
+    ul.left>a>li:hover{color: white; border: 1px solid white; opacity: 1;}
+
+    div.cent{position: absolute; top: 60px; left: 250px; overflow-y: scroll; width: 1260px; height: 630px;}
+
+    div.cent>h1{margin-top: 30px; margin-left: 10px;color: crimson;font-size:45px;font-weight: 100; font-family: '함초롬바탕';}
+
+
+
+    p.reason{ margin:30px 30px 0; font-size: 18px; font-family: 'Nanum Gothic'; line-height: 25px;}
+
+    div.programming>h2{margin-top: 50px; margin-left: 60px; color: black; font-size: 38px; font-weight: 200;}
+
+    div.py>img{ position: absolute; margin-left: 80px;  margin-top: 40px; display: block; width: 400px; height: 250px;}
+
+
+
+
+    div.py>p.desc{position: relative;  left: 600px; top: 40px;
+        padding-left:100px; border: 1px solid transparent; border-left-color: grey; width: 500px; height: 250px;}
+
+    div.py>p.desc>span.title{color: crimson;font-size: 30px;}
+
+    div.code{position: absolute; margin-left: 30px; margin-top: 70px; }
+    div.code>h2.title{display: block;  color: crimson;font-weight: 200; font-size: 25px;}
+    div.code>h2.title_2,h2.title_3,h2.title_4,h2.title_5,h2.title_6,h2.title_7,h2.title_8,h2.title_9,h2.title_10,h2.title_11,h2.title_12,h2.title_13,h2.title_14,h2.title_15,h2.title_16{display: block;  margin-top: 30px; color: crimson;font-weight: 200; font-size: 25px;}
+
+
+    div.code>p{position: relative; padding: 10px; overflow-y: scroll; width: 450px; height: 200px; border: 1px solid grey;}
+
+    div.code>p.code_2,p.code_4,p.code_6{ top: -283px; left:650px;}
+    div.code>p.code_1,p.code_3,p.code_5{left:50px;}
+    div.code>h2.title_2, h2.title_4, h2.title_6{position: relative;  top: -283px; left:650px; }
+
+
+    div.code>h2.title, h2.title_3, h2.title_5{position: relative; left:50px; }
+
+    h2.title_3{top: -280px;}
+    p.code_3{top:-280px;}
+
+    h2.title_5,h2.title_4{top: -560px;}
+    p.code_5,p.code_4{top: -560px;}
+
+    h2.title_6{top: -840px;}
+    p.code_6{top: -840px;}
+
+    div.code>h2.title_7{position: relative; top:-840px; left: 50px;}
+    div.code>p.code_7{position: relative; top: -840px; left: 50px;}
+
+
+    div.code>h2.title_8{position: relative; top: -1124px; left: 650px;}
+    div.code>p.code_8{position: relative; top: -1124px; left: 650px;}
+
+    div.code>h2.title_9{position: relative; top: -1124px; left: 50px;}
+    div.code>p.code_9{position: relative; top: -1124px; left: 50px;}
+
+    div.code>h2.title_10{position: relative; top: -1410px; left: 650px;}
+    div.code>p.code_10{position: relative; top: -1410px; left: 650px;}
+
+    div.code>p.code_11{position: relative; top: -1410px; left: 650px;}
+
+    div.code>p.code_12{position: relative; top: -1690px; left: 50px;}
+
+    div.code>p.code_13{position: relative; top: -1690px; left: 50px;}
+
+    div.code>p.code_14{position: relative; top: -1974px; left: 650px;}
+
+    div.code>h2.title_14{position: relative; top: -1974px; left: 650px;}
+
+    div.code>p.code_15{position: relative; top: -1974px; left: 50px;}
+
+    div.code>h2.title_15{position: relative; top: -1974px; left: 50px;}
+
+    div.code>p.code_16{position: relative; top: -2258px; left: 650px;
+        }
+
+    div.code>h2.title_16{position: relative; top: -2258px; left: 650px;}
+
+    div.code>h2.title_13{position: relative; top: -1690px; left: 50px;}
+    div.code>h2.title_11{position: relative; top: -1410px; left: 650px;}
+
+    div.code>h2.title_12{position: relative; top: -1690px; left: 50px;}
+
+</style>
 
 </head>
 <body>
@@ -48,7 +161,7 @@
          <div class="programming">
              <h2>Python-.</h2>
              <div class="py">
-                 <img src="../design_file/snow_game/snow_game.jpg" alt="2dgp_minigame_project_prev">
+                 <img src="./snow_game.jpg" alt="2dgp_minigame_project_prev">
                  <p class = "desc">
                      <span class = "title">mini_game</span><br><br>
                      date : 2018.9.10 <br>

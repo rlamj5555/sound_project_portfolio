@@ -6,7 +6,96 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./port_graphic.css">
+    
 </head>
+<style>
+    @import url(http://ts.daumcdn.net/custom/blog/0/606/skin/images/nanumgothic.css);
+        
+    #wrap{width: 100%; height: 100%; font-family: '함초롬바탕';}
+
+
+    ul.tp_mnu>li{ margin-right: 15px; display: inline-block; color: black; font-size: 17px;line-height: 50px;}
+
+    ul.tp_mnu>li>a{padding: 8px; padding-top: 4px; padding-bottom: 4px; color: black;font-weight: 600;18px; background-color: white; border-radius: 15px;}
+
+    ul.tp_mnu>li>a:hover{color: white; background-color: crimson; }
+    ul.tp_mnu{position: absolute; top: 0px; width: 100%; height: 50px;font-family: 'Nanum Gothic'; text-align: right;background-color: black;}
+
+
+
+    footer{ position:absolute;top: 700px;left: 270px; padding-top:10px;width: 80%; height: 30px; color: gray;  font-weight: 700; text-align: center; border: 1px solid transparent; border-top-color: gray;}
+
+    div.backimg{position:absolute; top: 50px; width:240px; height:700px;; background-image: url(./Photo%20by%20Tobias%20Tullius%20on%20Unsplash.jpg);}
+
+    div.left{position: absolute;top: 50px; width: 240px; height: 700px; background-color: black; opacity: 0.6;}
+
+
+    h1.tit{margin-top: 70px; margin-left: 10px; margin-right: 10px; color: white;font-size:23px;font-weight: 100; font-family: '함초롬바탕'; line-height: 25px}
+
+    h1.tit>span.font{color: crimson; font-size: 32px; font-weight: 700;}
+
+
+
+    ul.left{margin:80px 15px 0px; }
+
+    ul.left>a>li{ margin-bottom: 20px; padding-left: 20px; height: 50px; font-size: 18px; font-family: 'nanum';line-height: 50px; border: 1px solid white; opacity: 0.4}
+
+    ul.left>a>li.graphic{color: white; border: 1px solid white; opacity: 1;}
+
+    ul.left>a>li:hover{color: white; border: 1px solid white; opacity: 1;}
+
+    div.cent{position: absolute; top: 60px; left: 250px; overflow-y: scroll; width: 1260px; height: 630px;}
+
+    div.cent>h1{margin-top: 30px; margin-left: 10px;color: crimson;font-size:45px;font-weight: 100; font-family: '함초롬바탕';}
+
+    p.reason{ margin:40px 30px ; font-size: 18px; line-height: 25px;}
+
+
+    div.maya{margin:50px 20px; 0; font-family: '함초롬바탕'; }
+    div.maya>h2{color: black; font-size: 38px; font-weight: 200;}
+    span.title{display: block;margin-top: 20px; color: crimson;font-size: 30px;}
+
+    div.max{margin:50px 20px; 0; font-family: '함초롬바탕';}
+    div.max>h2{color: black; font-size: 38px; font-weight: 200;}
+
+
+    div.max>p.reason{ margin-bottom: 30px;}
+
+    div.art_1{ margin-bottom: 30px; padding-bottom: 20px; border: 1px solid transparent; border-bottom-color:grey;}
+
+    div.art_2{ margin-bottom: 30px; padding-bottom: 20px; border: 1px solid transparent; border-bottom-color:grey;}
+
+    div.art_3{ margin-bottom: 30px; padding-bottom: 20px; border: 1px solid transparent; border-bottom-color:grey;}
+
+
+
+    div.max>div.art_1{ margin-bottom: 30px; margin-left: 20px; padding-bottom: 20px; border: 1px solid transparent; border-bottom-color:grey;}
+
+    div.max>div.art_2{ margin-bottom: 30px;margin-left: 20px;  padding-bottom: 20px; border: 1px solid transparent; border-bottom-color:grey;}
+
+    div.max>div.art_3{ margin-bottom: 30px;margin-left: 20px;  padding-bottom: 20px; border: 1px solid transparent; border-bottom-color:grey;}
+
+    span.space{margin-left: 83px;}
+    div.maya>div.art_1>img.red{position: absolute;top: 980px; left: 60px; width: 300px;}
+    div.maya>div.art_1>img.green-grey{position: absolute; left: 60px; top: 800px; width: 500px;}
+    div.maya>div.art_1>img.circle{position: absolute; top: 800px; left: 600px; width: 400px;}
+
+    div.maya>div.art_1>p{margin-top: 400px;}
+    img.tabaco{margin-left: 20px; width: 400px;}
+    img.model{position: absolute; height: 260px;}
+    img.mapping{height: 300px;}
+
+    p{margin-left: 20px;}
+
+    div.piano>img{width: 400px;}
+    img.piano_1,img.piano_3,img.piano_5{margin-left: 20px;}
+
+    div.max>h2.tit{margin-top: 60px; margin-bottom: 50px;}
+    div.art_3>p{margin-left: 0;}
+    div.art_3>img.hand_1,img.hand_2,img.hand_3, img.hand_4{width: 400px;}
+
+
+</style>
 <body>
    <div id="wrap">
     
@@ -43,13 +132,13 @@
              <div class = "maya">
                <span class="desc"></span>
                <div class="art_1">
-                    <img class = "main" src="../design_file/broadcast/label.png" alt="#">
+                    <img class = "main" src="./label.png" alt="#">
                     
-                    <img class = "red"  src="../design_file/broadcast/label_2.jpg" alt="#">
+                    <img class = "red"  src="./label_2.jpg" alt="#">
                     
-                    <img class = "green-grey" src="../design_file/broadcast/label_3.jpg" alt="#">
+                    <img class = "green-grey" src="./label_3.jpg" alt="#">
                     
-                    <img class = "circle" src="../design_file/broadcast/6.jpg" alt="#">
+                    <img class = "circle" src="./6.jpg" alt="#">
                     
                     <p>
                         <span class = "title">
@@ -61,11 +150,11 @@
                </div>          
                
                <div class="tabaco">
-                    <img class = "tabaco" src="../design_file/tabaco/KakaoTalk_20151212_221151552.jpg"; alt="#">
+                    <img class = "tabaco" src="./KakaoTalk_20151212_221151552.jpg"; alt="#">
                     
-                     <img src="../design_file/tabaco/7.jpg" alt="" class="model">
+                     <img src="./7.jpg" alt="" class="model">
                      
-                      <img src="../design_file/tabaco/8.jpg" alt="" class="mapping"> 
+                      <img src="./8.jpg" alt="" class="mapping"> 
                     <p>
                         <span class = "title">제9회 흡연에티켓 공모전</span><br><br>
                         Date : 2017.12.12 <br>
@@ -79,10 +168,10 @@
          <div class="max">
              <h2 class="tit">3D Graphic-.</h2>
                <div class="art_3">
-                    <img class = "hand_1" src="../design_file/hands/1.jpg"; alt="#"> 
-                    <img class = "hand_2" src="../design_file/hands/2.jpg"; alt="#"> 
-                    <img class = "hand_3" src="../design_file/hands/3.jpg"; alt="#"> 
-                    <img class = "hand_4" src="../design_file/hands/4.jpg"; alt="#"> 
+                    <img class = "hand_1" src="./1.jpg"; alt="#"> 
+                    <img class = "hand_2" src="./2.jpg"; alt="#"> 
+                    <img class = "hand_3" src="./3.jpg"; alt="#"> 
+                    <img class = "hand_4" src="./4.jpg"; alt="#"> 
                   
                     <p>
                         <span class = "title">hands</span><br><br>
@@ -94,12 +183,12 @@
                
                
                <div class="piano">
-                    <img class = "piano_1" src="../design_file/piano/1.jpg"; alt="#"> 
-                    <img src="../design_file/piano/2.jpg" alt="#" class="piano_2">
-                     <img src="../design_file/piano/3.jpg" alt="#" class="piano_3">
-                      <img src="../design_file/piano/4.jpg" alt="#" class="piano_4">
-                       <img src="../design_file/piano/5.jpg" alt="#" class="piano_5">
-                       <img src="../design_file/piano/6.jpg" alt="#" class="piano_6">
+                    <img class = "piano_1" src="./p_1.jpg"; alt="#"> 
+                    <img src="./p_2.jpg" alt="#" class="piano_2">
+                     <img src="./p_3.jpg" alt="#" class="piano_3">
+                      <img src="./p_4.jpg" alt="#" class="piano_4">
+                       <img src="./p_5.jpg" alt="#" class="piano_5">
+                       <img src="./p_6.jpg" alt="#" class="piano_6">
                     <p>
                         <span class = "title">Piano Musicbox</span><br><br>
                         Date : 2015.12.16 <br>

@@ -5,9 +5,58 @@
     <title>Portfolio</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./port_cont.css">
+<!--    <link rel="stylesheet" href="./port_cont.css">-->
  
     <style>
+        @import url(http://ts.daumcdn.net/custom/blog/0/606/skin/images/nanumgothic.css);
+        #wrap{width: 100%; height: 600px; font-family: '함초롬바탕';}
+
+        ul.tp_mnu>li{ margin-right: 15px; display: inline-block; color: black; font-size: 17px;line-height: 50px;}
+
+        ul.tp_mnu>li>a{padding: 8px; padding-top: 4px; padding-bottom: 4px; color: black;font-weight: 600;18px; background-color: white; border-radius: 15px;font-family: 'nanumgothic';}
+
+        ul.tp_mnu>li>a:hover{color: white; background-color: crimson; }
+        ul.tp_mnu{position: absolute; top: 0px; width: 100%; height: 50px; text-align: right;background-color: black;}
+        div.backimg{height: 740px; overflow-x: hidden; overflow-y:hidden;}
+        div.backimg>img{height: 740px; width: 1600px; }
+
+
+
+        footer{ position:absolute;top: 680px;left: 75px; padding-top:10px;width: 90%; height: 30px; color: white;  font-weight: 100; text-align: center; border: 1px solid transparent; border-top-color: white; opacity: 0.7}
+
+
+
+
+
+        h1.tit{margin-top: 70px; margin-left: 10px; margin-right: 10px; color: white;font-size:23px;font-weight: 100; font-family: '함초롬바탕'; line-height: 25px}
+
+        h1.tit>span.font{color: crimson; font-size: 32px; font-weight: 700;}
+
+
+
+        div.cent{position: absolute; top: 60px; left: 250px;width: 1260px; height: 630px; font-family: "함초롬바탕";}
+
+        p.filter{position: absolute; top: 40px;  width: 1520px; height: 700px; background-color: black; opacity: 0.4}
+
+        div.mnu>a>p{ position: absolute; top: 160px; color: white; width: 200px; height: 400px; }
+
+        div.mnu>a>p.frst{margin-left: 330px;}
+        div.mnu>a>p.sec{margin-left: 540px;}
+        div.mnu>a>p.thrd{margin-left: 750px;}
+        div.mnu>a>p.four{margin-left: 960px;}
+
+        span.bg,span.tx{display: block; width: 200px; height: 200px;}
+
+        span.tx{background-color: dimgrey; font-size: 28px; text-align: center; line-height: 200px;font-weight: 100; }
+
+        div.mnu>a>p>span>img{width: 200px; height: 200px;  opacity: 0;}
+
+        div.mnu>a>p:hover{border: 3px solid white;}
+        div.mnu>a>p:hover>span.tx{background-color: crimson; font-size: 32px;text-decoration:overline;}
+        div.mnu>a>p:hover>span.bg>img{opacity: 1;}
+
+
+        
     </style>
 </head>
 <body>
@@ -18,37 +67,37 @@
      </ul>
      
      <div class="backimg">
-     <img src="../image_source/Photo%20by%20Tobias%20Tullius%20on%20Unsplash.jpg" alt="">  
+     <img src="./Photo%20by%20Tobias%20Tullius%20on%20Unsplash.jpg" alt="#">  
      
       <p class="filter"></p>        
       
      </div>
      
    <div class="mnu">
-       <a href="../web_file/port_project.html"> <p class="frst">
+       <a href="./port_project.html"> <p class="frst">
        <span class="tx">Project</span>
        <span class="bg">
-           <img src="../design_file/hes/hes_1x1.jpg" alt="#">
+           <img src="./hes_1x1.jpg" alt="#">
            </span>
            </p>
        </a>
     
     
   
-       <a href="../web_file/port_sound.html"> <p class="sec"> <span class="bg"><img src="../design_file/nwc_1x1.png" alt="#">
+       <a href="./port_sound.html"> <p class="sec"> <span class="bg"><img src="./nwc_1x1.png" alt="#">
            </span>
        <span class="tx">Sound</span></p>
        </a>
      
     
    
-       <a href="../web_file/port_graphic.html"> <p class="thrd"><span class="tx">Graphic</span>
-       <span class="bg"><img src="../design_file/piano/piano_1x1.jpg" alt="#">
+       <a href="./port_graphic.html"> <p class="thrd"><span class="tx">Graphic</span>
+       <span class="bg"><img src="./piano_1x1.jpg" alt="#">
            </span></p></a>
     
     
      
-       <a href="../web_file/port_programming.html"><p class="four"><span class="bg"><img src="../design_file/coding_1x1.png" alt="#">
+       <a href="./port_programming.html"><p class="four"><span class="bg"><img src="./coding_1x1.png" alt="#">
            </span>
         <span class="tx">Coding/etc.</span></p></a>
          </div>
