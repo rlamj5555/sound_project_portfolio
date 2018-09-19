@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./port_programming.css">
+ 
+
+</head>
+<body>
+    <div id = "wrap">
+   
+     <ul class="tp_mnu">
+         <li class="contact"><a href="./contact.html">Profile</a></li>
+            <li class="sns"><a href="./sns.html">Contact</a></li>
+     </ul>
+     
+     <div class="backimg">     
+     </div>
+     
+     <div class="left">
+          <h1 class="tit">버라이어티한 그녀의, <br>10여 년간의 행적. <br><br><span class = "font">'포트폴리오'</span></h1>
+          
+         <ul class="left">
+            <a href="./port_project.html"><li class="etc">Project</li></a>
+            <a href="./port_sound.html"><li class="sound">Sound</li></a>
+            
+            <a href="./port_graphic.html"><li class="graphic">Graphic</li></a>
+             
+            <a href="./port_programming.html"><li class="programming">Coding / etc.</li></a>
+             
+<!--            <a href="#"><li class="etc">etc.</li></a>-->
+             
+         </ul>
+     </div>
+     
+     
+     <div class="cent">
+         <h1>'Coding / etc.'</h1>
+         <p class = "reason">
+                       The series was originally published in English by two major publishers,<br>Bloomsbury in the United Kingdom and Scholastic Press in the United States. A play, Harry Potter and the Cursed Child, based on a story co-written by Rowling, premiered in London on 30 July 2016 at the Palace Theatre, and its script was published by Little, Brown.<br> The original seven books were adapted into an eight-part film series by Warner Bros. Pictures, which is the third highest-grossing film series of all time as of February 2018. In 2016, the total value of the Harry Potter franchise was estimated at $25 billion,[4] making Harry Potter one of the highest-grossing media franchises of all time.
+
+         </p>
+         
+         
+         <div class="programming">
+             <h2>Python-.</h2>
+             <div class="py">
+                 <img src="../design_file/snow_game/snow_game.jpg" alt="2dgp_minigame_project_prev">
+                 <p class = "desc">
+                     <span class = "title">mini_game</span><br><br>
+                     date : 2018.9.10 <br>
+                     tool : python <br>
+                     description  : and the Cursed Child, based on a story co-written by Rowling, <br>premiered in London on 30 July 2016 at the Palace Theatre, and its ild, based on a story co-writte
+                 </p>
+                 
+                 <div class="code">
+                    <h2 class="title">title_state.py</h2><br>
+                     <p class="code_1">
+                     
+                        import game_framework <br>
+                        import Stage1<br>
+                        import Stage2<br>
+                        import  map_select_state<br>
+                        from pico2d import *<br><br>
+
+
+                        name = "TitleState"<br>
+                        image = None<br><br>
+
+                        stage = 0<br><br>
+
+                        map1 = 1<br>
+                        map2 = 2<br><br>
+
+                        def enter():<br>
+                            global image<br>
+                            image = load_image('title_state.png')<br><br>
+
+
+                        def exit():<br>
+                            global image<br>
+                            del(image)<br><br>
+
+                        def handle_events(frame_time):<br>
+                            events = get_events()<br>
+                            for event in events:<br>
+                                if event.type == SDL_QUIT:<br>
+                                    game_framework.quit()<br>
+                                else:<br>
+                                    if(event.type, event.key) == (SDL_KEYDOWN, SDLK_ESCAPE):<br>
+                                        game_framework.change_state(map_select_state)<br>
+                                    elif(event.type, event.key) == (SDL_KEYDOWN, SDLK_SPACE):<br>
+                                        if(stage == map1):<br>
+                                            game_framework.change_state(Stage1)<br>
+                                        elif(stage == map2):<br>
+                                            game_framework.change_state(Stage2)<br><br>
+
+                        def draw(frame_time):<br>
+                            clear_canvas()<br>
+                            image.draw(400,300)<br>
+                            update_canvas()<br><br>
+
+                        def update(frame_time):<br>
+                            pass<br><br>
+
+                        def pause():<br>
+                            pass<br><br>
+
+                        def resume():<br>
+                            pass
+</p>
+                
+                    <h2 class="title_2">start_state.py</h2><br>
+                    <p class="code_2"> 
+                       import game_framework <br>
+                        import map_select_state<br>
+                        from pico2d import *<br><br>
+
+
+                        name = "StartState"<br>
+                        image = None<br>
+                        logo_time = 0.0<br><br>
+
+
+                        def enter():<br>
+                            global image<br>
+                            open_canvas()<br>
+                            image = load_image('start_state.png')<br>
+                            pass<br><br>
+
+
+                        def exit():<br>
+                            global image<br>
+                            del(image)<br>
+                            close_canvas()<br>
+                            pass<br><br>
+
+
+                        def update(frame_time):<br>
+                            global logo_time<br><br>
+
+                            if(logo_time > 1.0):<br>
+                                logo_time = 0<br>
+                                #game_framework.quit()<br>
+                                game_framework.push_state(map_select_state)<br>
+                            delay(0.01)<br>
+                            logo_time += 0.01<br><br>
+
+
+                        def draw(frame_time):<br>
+                            global image<br>
+                            clear_canvas()<br>
+                            image.draw(400,300)<br>
+                            update_canvas()<br><br>
+
+
+
+
+                        def handle_events(frame_time):<br>
+                            events = get_events()<br>
+                            pass<br><br>
+
+
+                        def pause(): pass<br><br>
+
+
+                        def resume(): pass
+                    </p>
+                     
+                     
+                    <h2 class="title_3">snow.py</h2><br>
+                    <p class="code_3"> 
+                    import random <br>
+
+                    from pico2d import *<br>
+
+                    class Snow:<br><br>
+
+                        image = None;<br><br>
+
+                        SPEED = None<br>
+                        snowSound = None<br>
+                        def __init__(self):<br>
+                            self.x, self.y = random.randint(20, 780), 590<br>
+                            self.SPEED = random.randint(50,200)<br>
+                            if Snow.image == None:<br>
+                                Snow.image = load_image('bigsnow.png')<br>
+                            if Snow.snowSound == None:<br>
+                                Snow.snowSound = load_music('bbi.mp3')<br>
+                                Snow.snowSound.set_volume(10)<br><br>
+
+                        def update(self, frame_time):<br>
+                            self.y -= (self.SPEED * frame_time)<br><br>
+
+
+                        def draw(self, frame_time):<br>
+                            self.image.draw(self.x, self.y)<br><br>
+
+                        def get_bb(self):<br>
+                            return self.x - 30, self.y - 30, self.x + 30, self.y + 30<br><br>
+
+                        def draw_bb(self):<br>
+                            draw_rectangle(*self.get_bb())<br><br>
+
+                        def resetSnow(self):<br>
+                            self.snowSound.play()<br>
+                            self.x, self.y = random.randint(20, 780), 590<br>
+                            self.SPEED = random.randint(50, 200)<br>
+                        def groundReset(self):<br>
+                            self.x, self.y = random.randint(20, 780), 590<br>
+                            self.SPEED = random.randint(50, 200)<br>
+
+                    </p>
+                
+                      
+                    <h2 class="title_4">bucket.py</h2><br>
+                    <p class="code_4"> 
+                    import random <br><br>
+
+                    from pico2d import *<br><br>
+
+                    class Bucket:<br>
+                        PIXEL_PER_METER = (10.0 / 0.3)           # 10 pixel 30 cm<br>
+                        RUN_SPEED_KMPH = 40.0                    # Km / Hour<br>
+                        RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)<br>
+                        RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)<br>
+                        RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)<br><br>
+
+                        TIME_PER_ACTION = 0.5<br>
+                        ACTION_PER_TIME = 1.0 / TIME_PER_ACTION<br>
+                        FRAMES_PER_ACTION = 8<br><br>
+
+                        image = None<br>
+                        font = None<br>
+                        LEFT_RUN, RIGHT_RUN, LEFT_STAND, RIGHT_STAND = 0, 1, 2, 3<br><br>
+
+                        def __init__(self):<br>
+                            self.x, self.y = 375, 90<br>
+                            self.frame = random.randint(0, 7)<br>
+                            self.life_time = 0.0<br>
+                            self.total_frames = 0.0<br>
+                            self.dir = 0<br>
+                            self.state = self.RIGHT_STAND<br>
+                            if Bucket.image == None:<br>
+                                Bucket.image = load_image('bucket_sheet.png')<br>
+                            if Bucket.font == None:<br>
+                                Bucket.font = load_font('OpenSansLight.TTF', 32)<br><br>
+
+
+
+                        def update(self, frame_time):<br>
+                            def clamp(minimum, x, maximum):<br>
+                                return max(minimum, min(x, maximum))<br><br>
+
+                            self.life_time += frame_time<br>
+                            distance = Bucket.RUN_SPEED_PPS * frame_time<br>
+                            self.total_frames += Bucket.FRAMES_PER_ACTION * <br>Bucket.ACTION_PER_TIME * frame_time<br>
+                            self.frame = int(self.total_frames) % 8<br>
+                            self.x += (self.dir * distance)<br><br>
+
+                            self.x = clamp(0, self.x, 800)<br><br>
+
+
+                        def draw(self):<br>
+                            self.image.clip_draw(self.frame * 100, self.state * 100,<br> 100, 100, self.x, self.y)<br><br>
+
+                        def get_bb(self):<br>
+                            return self.x - 50, self.y - 50, self.x + 50, self.y + 50<br>
+                            pass<br><br>
+
+                        def draw_bb(self):<br>
+                            draw_rectangle(*self.get_bb())<br><br>
+
+                        def getSnow(self):<br>
+                            print("snow")<br><br>
+
+                            pass<br><br>
+
+                        def getFire(self):<br>
+                            print("fire")<br><br>
+
+                            pass<br><br>
+
+                        def handle_event(self, event):<br>
+                            if (event.type, event.key) == (SDL_KEYDOWN, SDLK_LEFT):<br>
+                                if self.state in (self.RIGHT_STAND, self.LEFT_STAND, <br>self.RIGHT_RUN):<br>
+                                    self.state = self.LEFT_RUN<br>
+                                    self.dir = -1<br>
+                            elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_RIGHT):<br>
+                                if self.state in (self.RIGHT_STAND, self.LEFT_STAND, <br>self.LEFT_RUN):<br>
+                                    self.state = self.RIGHT_RUN<br>
+                                    self.dir = 1<br>
+                            elif (event.type, event.key) == (SDL_KEYUP, SDLK_LEFT):<br>
+                                if self.state in (self.LEFT_RUN,):<br>
+                                    self.state = self.LEFT_STAND<br>
+                                    self.dir = 0<br>
+                            elif (event.type, event.key) == (SDL_KEYUP, SDLK_RIGHT):<br>
+                                if self.state in (self.RIGHT_RUN,):<br>
+                                    self.state = self.RIGHT_STAND<br>
+                                    self.dir = 0<br>
+
+                    </p>
+                    
+                   <h2 class="title_5">Stage1.py</h2><br>
+                    <p class="code_5"> 
+                    import random <br>
+                    import json <br>
+                    import os <br> <br>
+
+                    from pico2d import * <br> <br>
+
+                    from snow import Snow <br>
+                    from bucket import Bucket <br>
+                    from ground import Ground <br>
+                    from fire import Fire <br>
+                    from score import Score <br> <br>
+
+                    import game_framework <br>
+                    import title_state <br>
+                    import gameclear <br>
+                    import gameover <br> <br>
+
+                    name = "MainState" <br> <br>
+
+                    backgroundImage = None <br> <br>
+
+                    snows = None <br>
+                    bucket = None <br>
+                    ground = None <br>
+                    fires = None <br>
+                    score = None <br> <br>
+
+                    count = 0 <br> <br>
+
+                    time = 0 <br> <br>
+
+                    def collide(a,b): <br>
+                        left_a,bottom_a,right_a,top_a = a.get_bb() <br>
+                        left_b, bottom_b, right_b, top_b = b.get_bb() <br>
+                        if left_a > right_b: return False <br>
+                        if right_a &lt; left_b: return False <br>
+                        if top_a &lt; bottom_b: return False<br>
+                        if bottom_a > top_b: return False<br>
+                        return True<br><br>
+
+                    def create_world():<br>
+                        global snows, bucket, ground, fires, time, score<br>
+                        time = 0<br>
+                        bucket = Bucket()<br>
+                        ground = Ground()<br>
+                        snows = [Snow() for i in range(15)]<br>
+                        fires = [Fire() for i in range(5)]<br>
+                        score = Score()<br>
+                        pass<br><br>
+
+                    def destroy_world():<br>
+                        global snows, bucket, ground,fires, time<br><br>
+
+                        del(snows)<br>
+                        del(bucket)<br>
+                        del(ground)<br>
+                        del(fires)<br>
+                        del(score)
+<br><br>
+                    def enter():<br>
+                        print("Stage1")<br>
+                        global backgroundImage<br>
+                        backgroundImage = load_image('stage1_bg.png')<br>
+                        create_world()<br><br>
+
+                        pass<br><br>
+
+
+                    def exit():<br><br>
+
+                        pass<br><br>
+
+
+                    def pause():<br>
+                        pass<br><br>
+
+
+                    def resume():<br>
+                        pass<br><br>
+
+
+                    def handle_events(frame_time):<br>
+                        events = get_events()<br>
+                        for event in events:<br>
+                            if event.type == SDL_QUIT:<br>
+                                game_framework.quit()<br>
+                            elif event.type == SDL_KEYDOWN and event.key ==<br> SDLK_ESCAPE:<br>
+                                game_framework.change_state(title_state)<br>
+                            else:<br>
+                                bucket.handle_event(event)<br><br>
+
+
+                    def update(frame_time):<br>
+                        global count, time<br>
+                        bucket.update(frame_time)<br><br>
+
+                        for snow in snows:<br>
+                            snow.update(frame_time)<br>
+                            if collide(ground,snow):<br>
+                                snow.groundReset()<br>
+                            if collide(bucket,snow):<br>
+                                snow.resetSnow()<br>
+                                bucket.getSnow()<br>
+                                count += 1<br><br>
+
+                        for fire in fires:<br>
+                            fire.update(frame_time)<br>
+                            if collide(ground,fire):<br>
+                                fire.groundReset()<br>
+                            if collide(bucket,fire):<br>
+                                fire.resetFire()<br>
+                                bucket.getFire()<br>
+                        if 100 &lt; = count:<br>
+                            game_framework.change_state(gameclear)<br>
+                            count = 0<br>
+                            time = 0<br>
+                        elif 60 &lt; time:<br>
+                            count = 0<br>
+                            time = 0<br>
+                            game_framework.change_state(gameover)<br><br>
+
+
+
+                    def draw(frame_time):<br>
+                        global time, count<br>
+                        time += frame_time<br>
+                        clear_canvas()<br>
+                        backgroundImage.draw(400,300)<br>
+                        bucket.draw()<br><br>
+
+                        Bucket.font.draw(375,460,'%3.2f'%time,(255,255,255))<br>
+                        score.font.draw(25,275,'%1.0f'%count,(255,255,255))<br>
+                        for snow in snows:<br>
+                            snow.draw(frame_time)<br><br>
+
+
+                        for fire in fires:<br>
+                            fire.draw(frame_time)<br><br>
+
+
+                        update_canvas()<br>
+                    
+                    </p>
+                    
+                    <h2 class="title_6">Stage2.py</h2><br>
+                    <p class="code_6">
+                        import random <br>
+                        import json<br>
+                        import os<br><br>
+
+                        from pico2d import *<br><br>
+
+                        from ice import Ice<br>
+                        from bucket import Bucket<br>
+                        from ground import Ground<br>
+                        from fire import Fire<br>
+                        from score import Score<br><br>
+
+                        import game_framework<br>
+                        import title_state<br>
+                        import gameclear<br>
+                        import gameover<br><br>
+
+                        name = "MainState"<br><br>
+
+                        backgroundImage = None<br><br>
+
+                        ices = None<br>
+                        bucket = None<br>
+                        ground = None<br>
+                        fires = None<br>
+                        score = None<br><br>
+
+                        count = 0<br><br>
+
+                        time = 0<br><br>
+
+                        def collide(a,b):<br>
+                            left_a,bottom_a,right_a,top_a = a.get_bb()<br>
+                            left_b, bottom_b, right_b, top_b = b.get_bb()<br>
+                            if left_a > right_b: return False<br>
+                            if right_a &lt; left_b: return False<br>
+                            if top_a &lt; bottom_b: return False<br>
+                            if bottom_a > top_b: return False<br>
+                            return True<br><br>
+
+                        def create_world():<br>
+                            global ices, bucket, ground, fires, time, score<br>
+                            time = 0<br>
+                            bucket = Bucket()<br>
+                            ground = Ground()<br>
+                            ices = [Ice() for i in range(15)]<br>
+                            fires = [Fire() for i in range(5)]<br>
+                            score = Score()<br>
+                            pass<br><br>
+
+                        def destroy_world():<br>
+                            global ices, bucket, ground,fires, time<br><br>
+
+                            del(ices)<br>
+                            del(bucket)<br>
+                            del(ground)<br>
+                            del(fires)<br>
+                            del(score)
+<br><br>
+                        def enter():<br>
+                            print("Stage1")<br>
+                            global backgroundImage<br>
+                            backgroundImage = load_image('stage2_bg.png')<br>
+                            create_world()<br><br>
+
+                            pass<br><br>
+
+
+                        def exit():<br><br>
+
+                            pass<br><br>
+
+
+                        def pause():<br>
+                            pass<br><br>
+
+
+                        def resume():<br>
+                            pass<br><br>
+
+
+                        def handle_events(frame_time):<br>
+                            events = get_events()<br>
+                            for event in events:<br>
+                                if event.type == SDL_QUIT:<br>
+                                    game_framework.quit()<br>
+                                elif event.type == SDL_KEYDOWN and event.key == <br>SDLK_ESCAPE:<br>
+                                    game_framework.change_state(title_state)<br>
+                                else:<br>
+                                    bucket.handle_event(event)<br><br>
+
+
+                        def update(frame_time):<br>
+                            global count, time<br>
+                            bucket.update(frame_time)<br><br>
+
+                            for ice in ices:<br>
+                                ice.update(frame_time)<br>
+                                if collide(ground,ice):<br>
+                                    ice.groundReset()<br>
+                                if collide(bucket,ice):<br>
+                                    ice.resetIce()<br>
+                                    bucket.getSnow()<br>
+                                    count += 1<br><br>
+
+                            for fire in fires:<br>
+                                fire.update(frame_time)<br>
+                                if collide(ground,fire):<br>
+                                    fire.groundReset()<br>
+                                if collide(bucket,fire):<br>
+                                    fire.resetFire()<br>
+                                    bucket.getFire()<br>
+                            if 100 &lt;= count:<br>
+                                game_framework.change_state(gameclear)<br>
+                                count = 0<br>
+                                time = 0<br>
+                            elif 60 &lt; time:<br>
+                                count = 0<br>
+                                time = 0<br>
+                                game_framework.change_state(gameover)
+<br><br>
+
+
+                        def draw(frame_time):<br>
+                            global time, count<br>
+                            time += frame_time<br>
+                            clear_canvas()<br>
+                            backgroundImage.draw(400,300)<br>
+                            bucket.draw()<br>
+                            Bucket.font.draw(375,460,'%3.2f'%time,(255,255,255))<br>
+                            score.font.draw(20,395,'%1.0f'%count,(255,255,255))<br>
+                            for ice in ices:<br>
+                                ice.draw(frame_time)<br><br>
+
+
+                            for fire in fires:<br>
+                                fire.draw(frame_time)<br><br>
+
+
+                            update_canvas()<br>
+
+
+                        
+                    </p>
+                    
+                                        
+                    <h2 class="title_7">game_framework.py</h2><br>
+                    <p class="code_7"> 
+                    import time <br><br>
+
+
+                    class GameState:<br>
+                        def __init__(self, state):<br>
+                            self.enter = state.enter<br>
+                            self.exit = state.exit<br>
+                            self.pause = state.pause<br>
+                            self.resume = state.resume<br>
+                            self.handle_events = state.handle_events<br>
+                            self.update = state.update<br>
+                            self.draw = state.draw<br><br>
+
+
+
+                    class TestGameState:<br><br>
+
+                        def __init__(self, name):<br>
+                            self.name = name<br><br>
+
+                        def enter(self):<br>
+                            print("State [%s] Entered" % self.name)<br><br>
+
+                        def exit(self):<br>
+                            print("State [%s] Exited" % self.name)<br><br>
+
+                        def pause(self):<br>
+                            print("State [%s] Paused" % self.name)<br><br>
+
+                        def resume(self):<br>
+                            print("State [%s] Resumed" % self.name)<br><br>
+
+                        def handle_events(self, frame_time):<br>
+                            print("State [%s] handle_events(%f)" % (self.name, <br>frame_time))<br><br>
+
+                        def update(self, frame_time):<br>
+                            print("State [%s] update(%f)" % (self.name, frame_time))<br><br>
+
+                        def draw(self, frame_time):<br>
+                            print("State [%s] draw(%f)" % (self.name, frame_time))<br><br>
+
+
+
+                    running = None<br>
+                    stack = None<br><br>
+
+
+                    def change_state(state):<br>
+                        global stack<br>
+                        pop_state()<br>
+                        stack.append(state)<br>
+                        state.enter()<br><br>
+
+
+
+                    def push_state(state):<br>
+                        global stack<br>
+                        if (len(stack) > 0):<br>
+                            stack[-1].pause()<br>
+                        stack.append(state)<br>
+                        state.enter()<br><br>
+
+
+
+                    def pop_state():<br>
+                        global stack<br>
+                        if (len(stack) > 0):<br>
+                            # execute the current state's exit function<br>
+                            stack[-1].exit()<br>
+                            # remove the current state<br>
+                            stack.pop()<br><br>
+
+                        # execute resume function of the previous state<br>
+                        if (len(stack) > 0):<br>
+                            stack[-1].resume()<br><br>
+
+
+
+                    def quit():<br>
+                        global running<br>
+                        running = False<br><br>
+
+
+                    def run(start_state):<br>
+                        global running, stack<br>
+                        running = True<br>
+                        stack = [start_state]<br>
+                        start_state.enter()<br>
+                        current_time = time.clock()<br>
+                        while (running):<br>
+                            frame_time = time.clock() - current_time<br>
+                            current_time += frame_time<br>
+                            stack[-1].handle_events(frame_time)<br>
+                            stack[-1].update(frame_time)<br>
+                            stack[-1].draw(frame_time)<br>
+                        # repeatedly delete the top of the stack<br>
+                        while (len(stack) > 0):<br>
+                            stack[-1].exit()<br>
+                            stack.pop()<br><br>
+
+
+                    def reset_time():<br>
+                        global current_time<br>
+                        current_time = time.clock()<br><br>
+
+                    def test_game_framework():<br>
+                        start_state = TestGameState('StartState')<br>
+                        run(start_state)<br><br>
+
+
+
+                    if __name__ == '__main__':<br>
+                        test_game_framework()
+                    </p>
+                    
+                                        
+                    <h2 class="title_8">gameclear.py</h2><br>
+                    <p class="code_8"> 
+                        import game_framework  <br>
+                        import  map_select_state<br>
+                        from pico2d import *<br><br>
+
+
+                        name = "TitleState"<br>
+                        image = None<br><br>
+
+                        stage = 0<br><br>
+
+                        map1 = 1<br>
+                        map2 = 2<br><br>
+
+                        def enter():<br>
+                            global image<br>
+                            image = load_image('gameclear.png')<br><br>
+
+
+                        def exit():<br>
+                            global image<br>
+                            del(image)<br><br>
+
+                        def handle_events(frame_time):<br>
+                            events = get_events()<br>
+                            for event in events:<br>
+                                if event.type == SDL_QUIT:<br>
+                                    game_framework.quit()<br>
+                                else:<br>
+                                    if(event.type, event.key) == (SDL_KEYDOWN, <br>SDLK_ESCAPE):<br>
+                                        game_framework.change_state(map_select_state)<br>
+                                    elif(event.type, event.key) == (SDL_KEYDOWN, <br>SDLK_SPACE):<br>
+                                        game_framework.change_state(map_select_state)
+<br><br>
+                        def draw(frame_time):<br>
+                            clear_canvas()<br>
+                            image.draw(400,300)<br>
+                            update_canvas()<br><br>
+
+                        def update(frame_time):<br>
+                            pass
+<br><br>
+                        def pause():<br>
+                            pass<br><br>
+
+                        def resume():<br>
+                            pass
+<br><br>
+                    </p>
+                    
+                                        
+                    <h2 class="title_9">gameover.py</h2><br>
+                    <p class="code_9">
+                        import game_framework <br>
+                        import  map_select_state<br>
+                        from pico2d import *<br><br>
+
+
+                        name = "TitleState"<br>
+                        image = None
+<br><br>
+                        stage = 0<br>
+<br><br>
+                        map1 = 1<br>
+                        map2 = 2<br>
+<br><br>
+                        def enter():<br>
+                            global image<br>
+                            image = load_image('gameover.png')
+<br><br>
+
+                        def exit():<br>
+                            global image<br>
+                            del(image)<br><br>
+
+                        def handle_events(frame_time):<br>
+                            events = get_events()<br>
+                            for event in events:<br>
+                                if event.type == SDL_QUIT:<br>
+                                    game_framework.quit()<br>
+                                else:<br>
+                                    if(event.type, event.key) == (SDL_KEYDOWN, <br>SDLK_ESCAPE):<br>
+                                        game_framework.change_state(map_select_state)<br>
+                                    elif(event.type, event.key) == (SDL_KEYDOWN, <br>SDLK_SPACE):<br>
+                                        game_framework.change_state(map_select_state)
+<br><br>
+                        def draw(frame_time):<br>
+                            clear_canvas()<br>
+                            image.draw(400,300)<br>
+                            update_canvas()<br><br>
+
+                        def update(frame_time):<br>
+                            pass<br><br>
+
+                        def pause():<br>
+                            pass<br><br>
+
+                        def resume():<br><br>
+                            pass<br>
+
+
+
+                        
+                    </p>
+                    
+                                        
+                    <h2 class="title_10">ice.py</h2><br>
+                    <p class="code_10">
+                        
+                        import random <br><br>
+
+                        from pico2d import *<br><br>
+
+                        class Ice:<br><br>
+
+                            image = None;<br><br>
+
+                            SPEED = None<br>
+                            IceSound = None<br>
+                            def __init__(self):<br>
+                                self.x, self.y = random.randint(20, 780), 590<br>
+                                self.SPEED = random.randint(50,200)<br>
+                                if Ice.image == None:<br>
+                                    Ice.image = load_image('icecube.png')<br>
+                                if Ice.IceSound == None:<br>
+                                    Ice.IceSound = load_music('bbi.mp3')<br>
+                                    Ice.IceSound.set_volume(10)<br><br>
+
+                            def update(self, frame_time):<br>
+                                self.y -= (self.SPEED * frame_time)<br><br>
+
+
+                            def draw(self, frame_time):<br>
+                                self.image.draw(self.x, self.y)
+<br><br>
+                            def get_bb(self):<br>
+                                return self.x - 30, self.y - 30, self.x + 30, self.y + 30<br><br>
+
+                            def draw_bb(self):<br>
+                                draw_rectangle(*self.get_bb())<br><br>
+
+                            def resetIce(self):<br>
+                                self.IceSound.play()<br>
+                                self.x, self.y = random.randint(20, 780), 590<br>
+                                self.SPEED = random.randint(50, 200)<br>
+                            def groundReset(self):<br>
+                                self.x, self.y = random.randint(20, 780), 590<br>
+                                self.SPEED = random.randint(50, 200)<br>
+                    </p>
+                    
+                                        
+                    <h2 class="title_11">main_state.py</h2><br>
+                    <p class="code_11">
+                        import random <br>
+                        import json<br>
+                        import os<br><br>
+
+                        from pico2d import *<br><br>
+
+                        import game_framework<br>
+                        import title_state<br><br>
+
+                        name = "MainState"<br><br>
+
+                        font = None<br><br>
+
+
+                        def enter():<br>
+                            pass<br><br>
+
+                        def exit():<br>
+                            pass<br><br>
+
+
+                        def pause():<br>
+                            pass<br><br>
+
+
+                        def resume():<br>
+                            pass<br><br>
+
+
+                        def handle_events():<br>
+                            events = get_events()<br>
+                            for event in events:<br>
+                                if event.type == SDL_QUIT:<br>
+                                    game_framework.quit()<br>
+                                elif event.type == SDL_KEYDOWN and event.key == <br>SDLK_ESCAPE:<br>
+                                    game_framework.change_state(title_state)<br><br>
+
+
+                        def update():<br>
+                            pass<br><br>
+
+
+                        def draw():<br>
+                            clear_canvas()<br><br>
+
+                            update_canvas()
+
+                    </p>
+                    
+                                        
+                    <h2 class="title_12">map_select_state.py</h2><br>
+                    <p class="code_12">
+                        import game_framework <br>
+                        import title_state <br>
+                        from pico2d import * <br> <br>
+
+
+                        name = "TitleState" <br>
+                        image = None <br> <br>
+
+
+
+                        def enter(): <br>
+                            global image <br>
+                            image = load_image('map_select.png') <br> <br>
+
+
+                        def exit(): <br>
+                            global image <br>
+                            del(image) <br> <br>
+
+
+                        def handle_events(frame_time): <br>
+                            events = get_events() <br>
+                            for event in events: <br>
+                                if event.type == SDL_QUIT: <br>
+                                    game_framework.quit() <br>
+                                else: <br>
+                                    if(event.type, event.key) == (SDL_KEYDOWN,  <br>SDLK_ESCAPE): <br>
+                                        game_framework.quit() <br>
+                                    elif(event.type, event.key) == (SDL_KEYDOWN,  <br>SDLK_1): <br>
+                                        title_state.stage = title_state.map1 <br>
+                                        game_framework.change_state(title_state) <br>
+                                    elif (event.type, event.key) == (SDL_KEYDOWN, <br> SDLK_2): <br>
+                                        title_state.stage = title_state.map2 <br>
+                                        game_framework.change_state(title_state) <br> <br>
+
+
+                        def draw(frame_time): <br>
+                            clear_canvas() <br>
+                            image.draw(400,300) <br>
+                            update_canvas() <br> <br>
+
+
+
+
+
+
+
+                        def update(frame_time): <br>
+                            pass <br> <br>
+
+
+                        def pause(): <br>
+                            pass <br> <br>
+
+
+                        def resume(): <br>
+                            pass <br>
+
+                        
+                    </p>
+                    
+                                        
+                    <h2 class="title_13">mygame.py</h2><br>
+                    <p class="code_13"> 
+                    import platform <br>
+                    import os<br><br>
+
+                    if platform.architecture()[0] == '32bit':<br>
+                        os.environ["PYSDL2_DLL_PATH"] = "./SDL2/x86"<br>
+                    else:<br>
+                        os.environ["PYSDL2_DLL_PATH"] = "./SDL2/x64"<br><br>
+
+                    import game_framework<br><br>
+
+
+                    import  start_state<br><br>
+
+                    game_framework.run(start_state)<br>
+                    </p>
+                    
+                                        
+                    <h2 class="title_14">score.py</h2><br>
+                    <p class="code_14"> 
+                    
+                    from pico2d import * <br><br>
+
+                    class Score:<br>
+                        font = None<br>
+                        def __init__(self):<br>
+                            if Score.font == None:<br>
+                                Score.font = load_font('OpenSansLight.TTF', 32)<br>
+                            pass<br>
+<br>
+                        def draw(self):<br>
+                            pass<br>
+                    </p>
+                    
+                                        
+                    <h2 class="title_15">title_state.py</h2><br>
+                    <p class="code_15">
+                        import game_framework <br>
+                        import Stage1<br>
+                        import Stage2<br>
+                        import  map_select_state<br>
+                        from pico2d import *<br><br>
+
+
+                        name = "TitleState"<br>
+                        image = None<br><br>
+
+                        stage = 0<br><br>
+
+                        map1 = 1<br>
+                        map2 = 2<br><br>
+
+                        def enter():<br>
+                            global image<br>
+                            image = load_image('title_state.png')<br><br>
+
+
+                        def exit():<br>
+                            global image<br>
+                            del(image)<br><br>
+
+                        def handle_events(frame_time):<br>
+                            events = get_events()<br>
+                            for event in events:<br>
+                                if event.type == SDL_QUIT:<br>
+                                    game_framework.quit()<br>
+                                else:<br>
+                                    if(event.type, event.key) == (SDL_KEYDOWN, <br>SDLK_ESCAPE):<br>
+                                        game_framework.change_state(map_select_state)<br>
+                                    elif(event.type, event.key) == (SDL_KEYDOWN, <br>SDLK_SPACE):<br>
+                                        if(stage == map1):<br>
+                                            game_framework.change_state(Stage1)<br>
+                                        elif(stage == map2):<br>
+                                            game_framework.change_state(Stage2)<br><br>
+
+                        def draw(frame_time):<br>
+                            clear_canvas()<br>
+                            image.draw(400,300)<br>
+                            update_canvas()<br><br>
+
+                        def update(frame_time):<br>
+                            pass<br><br>
+
+                        def pause():<br>
+                            pass<br><br>
+
+                        def resume():<br>
+                            pass<br>
+
+
+
+                        
+                    </p>
+                    
+                                        
+                    <h2 class="title_16">ground.py</h2><br>
+                    <p class="code_16"> 
+                    from pico2d import * <br>
+<br>
+
+                    class Ground:<br>
+                        def __init__(self):<br>
+                            pass<br><br>
+
+                        def draw(self):<br>
+                            pass<br><br>
+
+                        def get_bb(self):<br>
+                            return 0, 0, 800, 50<br><br>
+
+                        def draw_bb(self):<br>
+                            draw_rectangle(*self.get_bb())<br>
+                    </p>
+                    
+                    
+                
+                 </div>
+                 
+             </div>
+         </div>
+        </div>
+         
+    
+     <footer>e-mail : rlamj5555@naver.com <br>Copyright by 金旼祉</footer>
+  
+     </div>
+     
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
